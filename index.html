@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="todo-container">
+      <ul class="todo-list" id="list">
+        <li class="heading">
+          <h3>Today's To Do</h3>
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/000000/refresh--v1.png"
+            alt="refresh-icon"
+            class="refresh-icon"
+          />
+        </li>
+        <li>
+          <form class="form">
+            <label for="todo-input">
+              <input
+                type="text"
+                id="todo-input"
+                placeholder="Add to your list..."
+              />
+            </label>
+          </form>
+        </li>
+      </ul>
+      <article class="footer">
+        <button href="#" class="clear-all-completed">
+          Clear all completed
+        </button>
+      </article>
+    </section>
+
+    <template id="list-item-template">
+      <li class="list-item">
+        <label class="list-item-label">
+          <input type="checkbox" data-list-item-checkbox />
+          <span data-list-item-text></span>
+        </label>
+        <article>
+          <img
+            data-button-delete
+            src="https://img.icons8.com/ios-glyphs/30/000000/trash--v1.png"
+            alt="delete-icon"
+            class="delete-icon"
+          />
+          <img
+            data-button-edit
+            src="https://img.icons8.com/material-outlined/24/000000/edit--v1.png"
+            alt="edit-icon"
+            class="edit-icon"
+            href="#todo-input"
+          />
+        </article>
+      </li>
+    </template>
+  </body>
+</html>
